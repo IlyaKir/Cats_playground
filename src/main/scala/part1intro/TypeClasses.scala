@@ -1,3 +1,5 @@
+package part1intro
+
 object TypeClasses extends App {
   case class Person(name: String, age: Int)
 

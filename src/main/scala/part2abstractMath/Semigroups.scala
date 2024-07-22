@@ -1,7 +1,9 @@
+package part2abstractMath
+
 import cats.Semigroup
 import cats.instances.int._
-import cats.instances.string._
 import cats.instances.option._
+import cats.instances.string._
 
 // COMBINE elements of the same type
 object Semigroups extends App {
@@ -35,7 +37,7 @@ object Semigroups extends App {
   /**
    * Add support a new type
    */
-  private object Task1 {
+  object Task1 {
     case class Expense(id: Long, amount: Double)
     implicit val expenseSemigroup: Semigroup[Expense] = Semigroup.instance {
       (l, r) => Expense(Math.max(l.id, r.id), l.amount + r.amount)
@@ -56,7 +58,7 @@ object Semigroups extends App {
   /**
    * implement `reduce` using |+|
    */
-  private object Task2 {
+  object Task2 {
     def reduce[T: Semigroup](list: List[T]): T =
       list.reduce(_ |+| _)
   }

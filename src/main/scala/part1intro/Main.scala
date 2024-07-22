@@ -1,3 +1,5 @@
+package part1intro
+
 import cats.Eval
 
 object Main extends App {

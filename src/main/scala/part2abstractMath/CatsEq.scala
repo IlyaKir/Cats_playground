@@ -1,3 +1,5 @@
+package part2abstractMath
+
 object CatsEq extends App {
   // part1 - TC (type class) import
   import cats.Eq
